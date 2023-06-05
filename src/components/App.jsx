@@ -1,12 +1,11 @@
-import Profile from 'components/profile/Profile';
-import Statistics from 'components/statistics/Statistics'
-import FriendList from 'components/friendlist/FriendList';
-import FriendListItem from 'components/friendlist/FriendListItem';
-import TransactionHistory from 'components/transactions/TransactionHistory';
-import user from 'user.json';
-import data from 'data.json';
-import friends from 'friends.json';
-import transactions from 'transactions';
+import Profile from 'components/Profile/Profile';
+import Statistics from 'components/Statistics/Statistics'
+import FriendList from 'components/Friendlist/FriendList';
+import TransactionHistory from 'components/Transactions/TransactionHistory';
+import user from 'data/user.json';
+import data from 'data/data.json';
+import friends from 'data/friends.json';
+import transactions from 'data/transactions';
 
 
 
@@ -21,9 +20,7 @@ export const App = () => {
         stats={user.stats}
       />
       <Statistics title="Upload stats" stats={data} />
-      <FriendList friends={friends}>
-        <FriendListItem />
-      </FriendList>
+      <FriendList friends={friends} />
       <TransactionHistory transactions={transactions} />
     </>
   );
